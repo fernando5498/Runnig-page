@@ -1,0 +1,45 @@
+.SubTitle {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    left: -25px;
+    gap: 1.5rem;
+}
+.SubTitle-line {
+    position: relative;
+    display: flex;
+    gap: 0.2rem;
+}
+.SubTitle-line-1 {
+    background: linear-gradient(90deg, #300537 21.3%, #971f5f 70.95%);
+    border-radius: 5px;
+    width: clamp(30px, 2rem + 5vw, 120px);
+    height: 35.64px;
+    transform: skew(-25deg);
+    position: relative;
+}
+.SubTitle-line-2 {
+    background: #971f5f;
+    border-radius: 5px;
+    width: 5px;
+    height: 35.64px;
+    transform: skew(-25deg);
+    position: relative;
+}
+
+.SubTitle-text {
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(30px, 1rem + 3vw, 45px);
+    color: var(--color-primary);
+}
+
+.SubTitle--white .SubTitle-line-1 {
+    background: var(--color-white);
+}
+.SubTitle--white .SubTitle-line-2 {
+    background: var(--color-white);
+}
+.SubTitle--white .SubTitle-text {
+    color: var(--color-white);
+}

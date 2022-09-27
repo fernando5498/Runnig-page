@@ -1,0 +1,21 @@
+.Sub {
+    background: url(../../img/bg-Sub.png) center no-repeat;
+    background-size: cover;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.inputEmailSub {
+    background: #efefef;
+    box-shadow: -4px 3px 0px rgba(48, 5, 55, 0.5);
+    transform: skew(-15deg);
+    border-radius: 15px;
+    width: 530px;
+    height: 52px;
+    display: inline-block;
+    padding: 1rem;
+}
+.inputEmailSub:focus {
+    background: #efefef;
+    box-shadow: -4px 3px 0px rgba(48, 5, 55, 0.5);
+}

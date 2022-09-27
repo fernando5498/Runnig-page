@@ -1,0 +1,25 @@
+.Gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 1.5rem;
+}
+.card-video {
+    width: 100%;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 2rem;
+}
+.card-video-title {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 800;
+    line-height: 29px;
+    color: var(--color-primary);
+}
+.card-video-text {
+    font-family: "Ubuntu";
+    font-style: italic;
+    font-weight: 700;
+    line-height: 29px;
+    color: rgba(0, 0, 0, 0.54);
+}

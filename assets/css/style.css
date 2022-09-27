@@ -1,0 +1,17 @@
+@import url(base/variable.css);
+@import url(base/fonts.css);
+@import url(base/reset.css);
+@import url(components/buttons.css);
+@import url(components/SubTitle.css);
+@import url(components/Header.css);
+@import url(components/Footer.css);
+@import url(components/SocialIcons.css);
+@import url(components/FirsSection.css);
+@import url(page/home/1-Hero.css);
+@import url(page/home/2-Seller.css);
+@import url(page/home/3-About.css);
+@import url(page/home/4-Shop.css);
+@import url(page/home/5-Testimonials.css);
+@import url(page/home/6-Sub.css);
+@import url(page/about/Gallery.css);
+@import url(page/store/Store.css);

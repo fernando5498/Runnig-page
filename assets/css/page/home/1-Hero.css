@@ -1,0 +1,46 @@
+.Hero {
+    background: url(../../../img/HERO.jpg) center no-repeat;
+    height: clamp(620px, 100vh, 720px);
+    background-size: cover;
+    position: relative;
+}
+
+.Hero-title {
+    font-style: italic;
+    font-weight: 800;
+    font-size: clamp(50px, 2.2rem + 4vw, 80px);
+    line-height: clamp(60px, 2.2rem + 4vw, 120px);
+    color: #ffffff;
+    text-shadow: -5px 4px 0px #300537;
+}
+/* bg  */
+
+.rectBg {
+    position: absolute;
+    width: 500px;
+    height: 100%;
+    right: 1%;
+    transform: skew(-25deg);
+    top: 0px;
+    background: linear-gradient(180deg, rgba(48, 5, 55, 0.9) 0%, rgba(151, 31, 95, 0.9) 100%);
+    border-radius: 30px;
+}
+.rectBg::after {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 100%;
+    right: -50%;
+    top: 0px;
+    background: linear-gradient(180deg, rgba(48, 5, 55, 0.8) 0%, rgba(151, 31, 95, 0.8) 100%);
+    border-radius: 30px;
+}
+
+@media screen and (max-width: 576px) {
+    .rectBg {
+        right: 10%;
+        background: linear-gradient(180deg, rgba(48, 5, 55, 0.5) 0%, rgba(151, 31, 95, 0.5) 100%);
+        border-radius: 0px;
+        transform: skew(-25deg);
+    }
+}

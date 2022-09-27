@@ -1,0 +1,58 @@
+.Button {
+    box-shadow: -4px 3px 0px rgba(48, 5, 55, 0.5);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skew(-20deg);
+    transition: var(--transition);
+}
+.Button:hover {
+    transform: skew(-18deg) translateY(3px);
+    box-shadow: -4px 3px 0px rgba(48, 5, 55, 0);
+}
+
+.Button a,
+button {
+    font-style: italic;
+    font-weight: 800;
+    text-shadow: 2px 2px 0px #000000;
+    transform: skew(20deg);
+}
+
+/* btn-style */
+.Button--style-1 {
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+.Button--style-2 {
+    background: var(--color-white);
+    color: var(--color-primary);
+}
+.Button--style-3 {
+    background: #971f5f;
+
+    color: white;
+}
+
+/* btn-size */
+
+.Button--medium {
+    width: 274px;
+    height: 52px;
+}
+.Button--medium a,
+button {
+    font-size: 25px;
+    line-height: 38px;
+    text-shadow: none;
+}
+.Button--tall {
+    width: 311.5px;
+    height: 63px;
+}
+.Button--tall a,
+button {
+    font-size: 30px;
+    line-height: 45px;
+}

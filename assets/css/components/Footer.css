@@ -1,0 +1,63 @@
+.Footer {
+    width: 100%;
+    background: linear-gradient(89.71deg, #300537 23.22%, #971f5f 92.95%);
+    color: white;
+}
+
+.footerCopy {
+    background-color: #300537;
+    color: white;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(12px, 0.5rem + 1vw, 18px);
+    line-height: 21px;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.Footer-subTitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+.Footer-list {
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: #ffffff;
+}
+
+.Footer-list li {
+    position: relative;
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.Footer-list a {
+    transition: var(--transition);
+    background-image: linear-gradient(180deg, #ffffff 0%, #fdfdfd 100%);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+}
+
+.Footer-list a:hover {
+    background-size: 100% 2px;
+}
+
+.Footer-list-circle::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #ff289b9c;
+}
