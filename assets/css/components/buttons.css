@@ -6,6 +6,7 @@
     align-items: center;
     transform: skew(-20deg);
     transition: var(--transition);
+    text-align: center;
 }
 .Button:hover {
     transform: skew(-18deg) translateY(3px);
@@ -13,7 +14,8 @@
 }
 
 .Button a,
-button {
+.Button button,
+.Button input {
     font-style: italic;
     font-weight: 800;
     text-shadow: 2px 2px 0px #000000;
@@ -38,21 +40,27 @@ button {
 /* btn-size */
 
 .Button--medium {
-    width: 274px;
+    width: 245px;
     height: 52px;
 }
 .Button--medium a,
-button {
+.Button--medium button,
+.Button--medium input {
     font-size: 25px;
     line-height: 38px;
     text-shadow: none;
+    width: 100%;
 }
+
+/* grande   */
 .Button--tall {
-    width: 311.5px;
+    width: clamp(270px, 250px + 1vw, 285px);
     height: 63px;
 }
 .Button--tall a,
-button {
-    font-size: 30px;
+.Button--tall button,
+.Button--tall input {
+    font-size: clamp(1.7rem, 1.2rem + 1vw, 1.875rem);
     line-height: 45px;
+    width: 100%;
 }

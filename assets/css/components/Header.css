@@ -11,7 +11,7 @@
     color: var(--color-primary);
 }
 .Header.active .Navbar-logo img {
-    width: 100px;
+    width: 75px;
     transition: var(--transition);
 }
 /* navbar  */
@@ -26,6 +26,8 @@
     align-items: center;
     transition: var(--transition);
     color: var(--color-white);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .Nav {
@@ -67,6 +69,12 @@
     display: inherit;
     gap: inherit;
 }
+
+.Navbar-utils a,
+.Navbar-utils i {
+    transition: all 100ms;
+}
+
 .Navbar-utils a:hover,
 .Navbar-utils i:hover {
     color: var(--color-primary);
@@ -165,7 +173,7 @@
 
 @media screen and (max-width: 992px) {
     .Header.active .Navbar-logo img {
-        width: 60px;
+        width: 70px;
         transition: var(--transition);
     }
     .Navbar-logo img {

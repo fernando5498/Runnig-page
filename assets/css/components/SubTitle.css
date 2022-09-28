@@ -43,3 +43,10 @@
 .SubTitle--white .SubTitle-text {
     color: var(--color-white);
 }
+/* 
+@media screen and (max-width: 567px) {
+    .SubTitle-text {
+        text-align: center;
+        width: 100%;
+    }
+} */
