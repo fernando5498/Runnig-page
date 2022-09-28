@@ -2,6 +2,11 @@
     background: url(../../../img/adorno.png) center no-repeat;
     background-size: cover;
 }
+.wrapper-CardShop {
+    margin-top: -80px;
+    margin-bottom: 80px;
+}
+
 /* cards  */
 .CardShop-container {
     display: flex;
@@ -12,13 +17,13 @@
     gap: 2rem;
 }
 .CardShop:nth-child(1) {
-    margin-top: -100px;
+    margin-top: -90px;
 }
 .CardShop:nth-child(2) {
-    margin-top: -200px;
+    margin-top: -180px;
 }
 .CardShop:nth-child(3) {
-    margin-top: -300px;
+    margin-top: -260px;
 }
 
 .CardShop-shadow {
@@ -54,7 +59,7 @@
 }
 
 .CardShop-title {
-    width: 279.5px;
+    width: 260.5px;
     height: 45px;
     border-radius: 10px;
     background: linear-gradient(90deg, #300537 21.3%, #971f5f 70.95%),
@@ -63,7 +68,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: -2rem;
+    margin-left: -1.8rem;
 }
 .CardShop-title-h {
     font-style: italic;
@@ -71,6 +76,11 @@
     font-size: 25px;
     line-height: 38px;
     margin: 0;
+}
+.u-Button-Shop {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 @media screen and (max-width: 992px) {
@@ -81,5 +91,11 @@
     .CardShop:nth-child(2),
     .CardShop:nth-child(3) {
         margin-top: 0;
+    }
+    .u-Button-Shop {
+        position: relative;
+    }
+    .wrapper-CardShop {
+        margin: 0;
     }
 }

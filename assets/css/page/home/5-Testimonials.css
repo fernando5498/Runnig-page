@@ -135,10 +135,9 @@
 .owl-nav {
     color: white;
     font-size: 2rem;
-    transform: skew(-20deg);
 }
 
 .owl-nav button:hover {
     background: transparent !important;
-    transform: skew(20deg) scale(1.1);
+    transform: scale(1.1);
 }
