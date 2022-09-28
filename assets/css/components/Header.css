@@ -14,6 +14,14 @@
     width: 75px;
     transition: var(--transition);
 }
+.Header--bgWhite {
+    background-color: white;
+}
+
+.Header--bgWhite .Navbar-utils a,
+.Header--bgWhite .Navbar-utils i {
+    color: var(--color-primary);
+}
 /* navbar  */
 
 .Navbar-logo img {

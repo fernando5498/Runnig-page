@@ -1,0 +1,99 @@
+.Hero-Questions {
+    position: relative;
+    height: clamp(520px, 100vh, 620px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+.Hero-Questions .SubTitle-text {
+    left: 0;
+    text-shadow: -5px 4px 0px #300537;
+}
+.Hero-Questions::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 110%;
+    height: 100%;
+    background: linear-gradient(180deg, #300537 36.04%, #971f5f 116.04%);
+    transform: skew(-25deg) translateX(-50%);
+    z-index: -1;
+    border-radius: 30px;
+}
+
+.Hero-Questions-img {
+    width: 400px;
+    transform: skew(-25deg);
+    height: 388px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.Hero-Questions-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    transform: skew(25deg) scale(1.5);
+}
+/* --------------------- #QUESTIONS --------------------- */
+.Questions {
+    background: url(../../../img/adorno.png) center no-repeat;
+    background-size: cover;
+}
+
+.Questions-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31.95px;
+    line-height: 39px;
+    text-align: center;
+    color: var(--color-primary);
+}
+.Questions-title-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.75px;
+    line-height: 27px;
+    text-align: center;
+}
+/* ------------------------ IMTES ----------------------- */
+
+.Questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.Questions-item {
+    padding: 1rem;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.Questions-item-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 25px;
+    color: var(--color-primary);
+}
+.Questions-item-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8875rem;
+
+    color: #667085;
+}
+
+@media screen and (max-width: 772px) {
+    .Hero-Questions::after {
+        left: 0%;
+        width: 100%;
+        transform: skew(0deg) translateX(0%);
+    }
+}
