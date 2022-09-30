@@ -10,7 +10,7 @@
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(12px, 0.5rem + 1vw, 18px);
+    font-size: clamp(12px, 0.5rem + 1vw, 14px);
     width: 100%;
     padding: 1rem;
 }
@@ -34,15 +34,16 @@
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 400;
-    font-size: 17px;
+    font-size: clamp(0.875rem, 0.5rem + 1vw, 1.0625rem);
 }
 .Footer-list .Footer-list-icons {
     display: grid;
-    grid-template-columns: 15% 85%;
+    grid-template-columns: 35px 85%;
 }
 
 .Footer-list i {
     font-size: 1.5rem;
+    margin: 0 auto;
 }
 .Footer-list a {
     transition: var(--transition);
@@ -50,6 +51,9 @@
 
 .Footer-list a:hover {
     transform: translateX(3px);
+}
+.Footer-list-circle {
+    margin-left: 21px;
 }
 
 .Footer-list-circle::after {
@@ -69,9 +73,11 @@
         text-align: center;
     }
     .Footer-list li {
-        text-align: center;
         margin: 1rem auto;
         display: block;
         width: fit-content;
+    }
+    .Footer-list .Footer-list-icons {
+        max-width: 205px;
     }
 }

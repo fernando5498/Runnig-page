@@ -4,24 +4,7 @@
     z-index: 3;
     transition: var(--transition);
 }
-.Header.active {
-    background-color: white;
-}
-.Header.active .Navbar {
-    color: var(--color-primary);
-}
-.Header.active .Navbar-logo img {
-    width: 75px;
-    transition: var(--transition);
-}
-.Header--bgWhite {
-    background-color: white;
-}
 
-.Header--bgWhite .Navbar-utils a,
-.Header--bgWhite .Navbar-utils i {
-    color: var(--color-primary);
-}
 /* navbar  */
 
 .Navbar-logo img {
@@ -30,9 +13,9 @@
 
 .Navbar {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 20% 73% 7%;
     align-items: center;
-    transition: var(--transition);
+    transition: 300ms;
     color: var(--color-white);
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -46,25 +29,27 @@
     font-size: 20px;
     line-height: 23px;
     color: var(--color-primary);
-    gap: 1.5rem;
+    gap: 1.7rem;
 }
 .close {
-    position: absolute;
-    right: 2rem;
+    margin-left: auto;
+    color: var(--color-primary);
+    opacity: 1;
+}
+.close:hover {
+    color: var(--color-primary-black);
 }
 .Nav-link {
     transition: var(--transition);
-    background-image: linear-gradient(180deg, #681240 0%, #971f5f 100%);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
 }
 
 .Nav-link:hover {
-    background-size: 100% 2px;
+    transform: translateY(-3px);
+    text-shadow: 0px 2px 0px #300537, 0px 1px 0px #300537;
 }
 .Nav-link.active {
-    background-size: 100% 2px;
+    transform: translateY(-3px);
+    text-shadow: 0px 2px 0px #300537, 0px 1px 0px #300537;
 }
 
 /* nav right  */
@@ -73,23 +58,29 @@
     display: flex;
     gap: 1.5rem;
 }
-.Navbar-utils {
+.Navbar-utils,
+.Navbar-redes {
     display: inherit;
     gap: inherit;
 }
 
 .Navbar-utils a,
-.Navbar-utils i {
-    transition: all 100ms;
+.Navbar-utils i,
+.Navbar-redes a,
+.Navbar-redes i {
+    transition: all 300ms ease-out;
 }
 
 .Navbar-utils a:hover,
-.Navbar-utils i:hover {
-    color: var(--color-primary);
+.Navbar-utils i:hover,
+.Navbar-redes a:hover,
+.Navbar-redes i:hover {
+    transform: scale(1.1);
 }
 
 .separador {
-    border-right: 1px solid #ffffff4d;
+    width: 2px;
+    background: #ffffffb2;
 }
 /* cart  */
 
@@ -152,31 +143,28 @@
 .search {
     position: relative;
 }
-.input-search {
+
+/* active  */
+.Header.active {
     background-color: white;
-    max-width: 200px;
-    position: absolute;
-    top: 0%;
-    border-radius: 10px;
-    padding: 0.7rem;
-    font-size: 0.8rem;
-    max-height: 30px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+}
+.Header.active .Navbar {
     color: var(--color-primary);
-    right: 0;
-    opacity: 0;
-    pointer-events: none;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+.Header.active .Navbar-logo img {
+    width: 75px;
     transition: var(--transition);
 }
-.input-search.active {
-    top: 120%;
-    opacity: 1;
-    pointer-events: all;
-}
-.input-search:focus {
-    background-color: white;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+
+.Header.active .Navbar-utils a,
+.Header.active .Navbar-utils i,
+.Header.active .Navbar-redes i,
+.Header.active .Navbar-redes a {
     color: var(--color-primary);
+}
+.Header.active .separador {
+    background: var(--color-primary);
 }
 
 @media screen and (max-width: 992px) {
@@ -209,24 +197,26 @@
     }
     .Nav {
         flex-direction: column;
+        width: 100%;
+        text-align: end;
     }
     .Navbar-right {
         justify-content: space-around;
-        width: 100%;
         color: var(--color-primary);
     }
-
-    .input-search.active {
-        top: -150%;
-        opacity: 1;
-        pointer-events: all;
-    }
-
-    .Cart-list {
-        top: -270px;
+    .Navbar-utils {
+        color: var(--color-white);
     }
 }
 @media screen and (max-width: 560px) {
+    .Header.active .Navbar-logo img {
+        width: 55px;
+        transition: var(--transition);
+    }
+    .Navbar-logo img {
+        width: 65px;
+        transition: var(--transition);
+    }
     .wrapper-nav {
         width: 100%;
     }

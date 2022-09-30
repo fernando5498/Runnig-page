@@ -49,6 +49,32 @@
     border-radius: 50%;
     width: 56px;
     height: 55px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+@keyframes animationCart {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    33.3% {
+        transform: rotateZ(15deg);
+    }
+    66.6% {
+        transform: rotateZ(-14deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+.CardSellers:hover .CardSellers-icon {
+    animation: animationCart 600ms 1 ease-in-out;
+}
+
+.CardSellers-icon:hover {
+    transform: scale(1.1);
+}
+.CardSellers-icon:active {
+    transform: scale(1.02);
 }
 
 .CardSellers-img img {
@@ -60,7 +86,7 @@
     font-family: "Ubuntu";
     font-style: italic;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 1.75rem;
     line-height: 34px;
     color: var(--color-primary);
     text-align: center;
@@ -82,8 +108,7 @@
 .CardSellers-title-h {
     font-style: italic;
     font-weight: 700;
-    font-size: 25px;
-    line-height: 38px;
+    font-size: 1.4rem;
     margin: 0;
 }
 

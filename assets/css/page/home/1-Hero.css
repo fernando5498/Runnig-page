@@ -8,8 +8,8 @@
 .Hero-title {
     font-style: italic;
     font-weight: 800;
-    font-size: clamp(50px, 2.2rem + 4vw, 80px);
-    line-height: clamp(60px, 3.2rem + 4vw, 120px);
+    font-size: clamp(2.5rem, 2rem + 4vw, 4.6875rem);
+    line-height: clamp(3.125rem, 3rem + 4vw, 7.1875rem);
     color: #ffffff;
     text-shadow: -5px 4px 0px #300537;
     margin-bottom: 2rem;

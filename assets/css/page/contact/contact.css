@@ -18,14 +18,14 @@
 .form-title {
     font-style: normal;
     font-weight: 600;
-    font-size: 48px;
+    font-size: 3rem;
 }
 .form-input {
     font-style: normal;
     display: block;
     width: 100%;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     color: #667085;
     background: #ffffff;
     border: 1px solid #d0d5dd;
@@ -43,6 +43,6 @@
 .form-label {
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #344054;
 }

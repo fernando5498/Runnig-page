@@ -47,16 +47,14 @@
 .Questions-title {
     font-style: normal;
     font-weight: 600;
-    font-size: 31.95px;
-    line-height: 39px;
+    font-size: 1.9969rem;
     text-align: center;
     color: var(--color-primary);
 }
 .Questions-title-text {
     font-style: normal;
     font-weight: 400;
-    font-size: 17.75px;
-    line-height: 27px;
+    font-size: 1.1094rem;
     text-align: center;
 }
 /* ------------------------ IMTES ----------------------- */
@@ -79,7 +77,6 @@
     font-style: normal;
     font-weight: 500;
     font-size: 1.1rem;
-    line-height: 25px;
     color: var(--color-primary);
 }
 .Questions-item-text {

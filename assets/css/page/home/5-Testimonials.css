@@ -28,7 +28,7 @@
 @media screen and (max-width: 772px) {
     .Testimonials-right-bg {
         width: 100%;
-        height: 52%;
+        height: 56%;
         left: 0;
         border-radius: 0px;
         transform: skew(0);
@@ -41,13 +41,13 @@
     font-family: "Ubuntu";
     font-style: italic;
     font-weight: 700;
-    font-size: clamp(1rem, 0.5rem + 1vw, 25px);
-    line-height: 29px;
+    font-size: clamp(0.9rem, 0.5rem + 1vw, 1.5625rem);
+
     color: rgba(0, 0, 0, 0.54);
 }
 
 .Testimonials-p::first-letter {
-    font-size: 25px;
+    font-size: 1.5625rem;
 }
 /* cards  */
 
@@ -72,13 +72,28 @@
     transform: skew(10deg);
 }
 
-.CardTestimonial-img {
+.CardTestimonial-poster {
     width: 202px;
     height: 195px;
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid rgba(151, 31, 95, 0.61);
     position: relative;
+}
+.CardTestimonial-poster i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2.5rem;
+    transform: translate(-50%, -50%);
+    color: var(--color-primary);
+    z-index: 2;
+    transition: all 300ms;
+    pointer-events: none;
+}
+
+.CardTestimonial-poster:hover i {
+    transform: translate(-50%, -50%) scale(1.2);
 }
 .CardTestimonial-icon {
     position: absolute;
@@ -95,11 +110,14 @@
     height: 55px;
 }
 
-.CardTestimonial-img img {
+.CardTestimonial-poster img,
+.CardTestimonial-poster video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: relative;
 }
+
 .CardTestimonial-price {
     font-family: "Ubuntu";
     font-style: italic;

@@ -3,7 +3,7 @@
     background-size: cover;
 }
 .wrapper-CardShop {
-    margin-top: -80px;
+    margin-top: -50px;
     margin-bottom: 80px;
 }
 
@@ -73,8 +73,7 @@
 .CardShop-title-h {
     font-style: italic;
     font-weight: 700;
-    font-size: 25px;
-    line-height: 38px;
+    font-size: 1.4rem;
     margin: 0;
 }
 .u-Button-Shop {
@@ -97,5 +96,11 @@
     }
     .wrapper-CardShop {
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 572px) {
+    .CardShop-title {
+        margin: 0 auto;
     }
 }

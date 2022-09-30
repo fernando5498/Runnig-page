@@ -16,11 +16,11 @@
 .About-p {
     font-style: italic;
     font-weight: 800;
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 0.5rem + 1vw, 1rem);
     color: var(--color-white);
 }
 .About-p::first-letter {
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 /* imagen  */
 
@@ -80,7 +80,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 38px;
+    padding: 15px;
     background: linear-gradient(180deg, #681240 0%, #971f5f 100%);
     transition: all 600ms;
 }
@@ -91,7 +91,7 @@
 .Beneficios-item-text {
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.2rem;
     line-height: 23px;
     color: #300537;
 }
@@ -119,5 +119,11 @@
     .Beneficios::after {
         transform: skew(0deg);
         left: 0;
+    }
+}
+
+@media screen and (max-width: 572px) {
+    .Beneficios {
+        justify-content: center;
     }
 }
