@@ -62,3 +62,8 @@
     font-size: clamp(1.6rem, 1.2rem + 1vw, 1.875rem);
     width: 100%;
 }
+
+.Button--small {
+    width: clamp(190px, 180px + 2vw, 205px);
+    height: 42px;
+}

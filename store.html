@@ -41,7 +41,7 @@
 							<i class="fa-solid fa-xmark"></i>
 						</div>
 						<li class="Nav-link"><a href="about.html"> About us </a></li>
-						<li class="Nav-link"><a href="store.html"> Shop By Category </a></li>
+						<li class="Nav-link active"><a href="store.html"> Shop By Category </a></li>
 						<li class="Nav-link"><a href="questions.html"> Faq´s </a></li>
 						<li class="Nav-link"><a href="contact.html"> Contact Us </a></li>
 					</ul>
@@ -119,21 +119,34 @@
 	</header>
 
 	<main class="Main">
-		<!-- ---------------- Firs Section ----------------- -->
-		<section class="FirsSection py-5 d-flex justify-content-center align-items-center">
-			<video class="video-bg" src="assets/video/Zapatos-8294.mp4" autoplay muted loop></video>
-			<div class="FirsSection-rectBg"></div>
-			<div class="container py-5">
-				<div class="row">
-					<div class="col mt-md-5 pt-md-5 col-md-8 ml-auto mb-5">
-						<h2 class="FirsSection-title text-md-right text-center">Shoping</h2>
+		<section class="Hero-Questions py-5">
+
+			<div class="container ">
+				<div class="row justify-content-between align-items-center">
+					<div class="col-12 col-md-6">
+
+						<div class="SubTitle--white p-0 col-12">
+							<h2 class="SubTitle-text text-md-left  m-0 text-center">SHOP BY CATEGORY</h2>
+						</div>
+						<div class="Hero-Questions-text mb-4 mt-3 text-center text-md-left">Clothes are one of the most
+							important things you need when exercising. We help you choose the right clothes so you don't
+							have problems with your routines</div>
+						<div class=" Button Button--medium  Button--style-1 mx-auto mr-md-auto ml-md-0">
+							<a href="#Shoping-gallery">View More</a>
+						</div>
+					</div>
+					<div class="col-12 col-md-5 d-none d-md-block">
+						<div class="Hero-Questions-img">
+							<img src='assets/img/banner-shop.jpg' alt='' loading='lazy' />
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
+
 		<!-- -------------- Store -------------- -->
-		<section class="Shoping-gallery py-5" id="Questions">
+		<section class="Shoping-gallery py-5" id="Shoping-gallery">
 			<div class="SubTitle col-12">
 				<div class="SubTitle-line">
 					<div class="SubTitle-line-1"></div>
@@ -143,12 +156,25 @@
 				</div>
 				<h2 class="SubTitle-text">Shoping</h2>
 			</div>
+
+
 			<div class="container py-5">
 				<div class="row">
-					<div class="col Shoping-gallery-container" id="Shoping-gallery-container">
-						<!-- item-creado con java script  -->
-						<div class="item">
-							<div class="CardSellers">
+					<div class="col-12 mb-5">
+						<div class="buttons-gallery">
+							<button class="filter-button" data-filter="all">All</button>
+							<button class="filter-button" data-filter="t-shirt">T-shirt</button>
+							<button class="filter-button" data-filter="sportswear">Sportswear</button>
+							<button class="filter-button" data-filter="shoes">Shoes</button>
+						</div>
+					</div>
+
+					<div class="col-12 Shoping-gallery-container" id="Shoping-gallery-container">
+
+
+
+						<div class="item-shop filter shoes">
+							<div class="CardSellers ">
 								<div class="CardSellers-content">
 									<div class="CardSellers-img">
 										<img src="assets/img/PRODUCTO-1.jpg" alt="Adidas Shoes" loading="lazy" />
@@ -161,6 +187,86 @@
 								</div>
 							</div>
 						</div>
+
+
+						<div class="item-shop filter sportswear">
+							<div class="CardSellers ">
+								<div class="CardSellers-content">
+									<div class="CardSellers-img">
+										<img src="assets/img/PRODUCTO-2.jpg" alt="Sport short" loading="lazy" />
+									</div>
+									<div class="CardSellers-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+									<div class="CardSellers-price">100$</div>
+								</div>
+								<div class="CardSellers-title">
+									<h3 class="CardSellers-title-h">Sport short</h3>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="item-shop filter t-shirt">
+							<div class="CardSellers ">
+								<div class="CardSellers-content">
+									<div class="CardSellers-img">
+										<img src="assets/img/PRODUCTO-3.jpg" alt="Running T-shirt" loading="lazy" />
+									</div>
+									<div class="CardSellers-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+									<div class="CardSellers-price">100$</div>
+								</div>
+								<div class="CardSellers-title">
+									<h3 class="CardSellers-title-h">Running T-shirt</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="item-shop filter shoes">
+							<div class="CardSellers ">
+								<div class="CardSellers-content">
+									<div class="CardSellers-img">
+										<img src="assets/img/PRODUCTO-1.jpg" alt="Adidas Shoes" loading="lazy" />
+									</div>
+									<div class="CardSellers-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+									<div class="CardSellers-price">100$</div>
+								</div>
+								<div class="CardSellers-title">
+									<h3 class="CardSellers-title-h">Adidas Shoes</h3>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="item-shop filter sportswear">
+							<div class="CardSellers ">
+								<div class="CardSellers-content">
+									<div class="CardSellers-img">
+										<img src="assets/img/PRODUCTO-2.jpg" alt="Sport short" loading="lazy" />
+									</div>
+									<div class="CardSellers-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+									<div class="CardSellers-price">100$</div>
+								</div>
+								<div class="CardSellers-title">
+									<h3 class="CardSellers-title-h">Sport short</h3>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="item-shop filter t-shirt">
+							<div class="CardSellers ">
+								<div class="CardSellers-content">
+									<div class="CardSellers-img">
+										<img src="assets/img/PRODUCTO-3.jpg" alt="Running T-shirt" loading="lazy" />
+									</div>
+									<div class="CardSellers-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+									<div class="CardSellers-price">100$</div>
+								</div>
+								<div class="CardSellers-title">
+									<h3 class="CardSellers-title-h">Running T-shirt</h3>
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>

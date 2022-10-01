@@ -1,6 +1,6 @@
 .Contact {
     background: url(../../../img/adorno.png) center no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 .Contact-map {
     height: 100%;
@@ -19,6 +19,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 3rem;
+    color: var(--color-primary);
 }
 .form-input {
     font-style: normal;
@@ -44,5 +45,6 @@
     font-style: normal;
     font-weight: 500;
     font-size: 0.875rem;
-    color: #344054;
+
+    color: var(--color-primary);
 }

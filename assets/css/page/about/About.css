@@ -1,0 +1,189 @@
+/* ------------------------- ABOUT ------------------------ */
+
+.Section-description-about-img {
+    width: 350px;
+    transform: skew(-25deg);
+    height: 330px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: -28px 28px 0px var(--color-primary-black);
+}
+.Section-description-about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: skew(25deg) scale(1.5);
+}
+.Section-description-about-h {
+    font-size: clamp(2.2rem, 1rem + 3vw, 3.625rem);
+    line-height: 1;
+    position: relative;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+.Section-description-about-p {
+    font-size: clamp(0.8rem, 0.5rem + 0.5vw, 1.2rem);
+}
+
+@media screen and (max-width: 776px) {
+    .Section-description-about-img {
+        width: 100%;
+        transform: skew(0deg);
+        box-shadow: -6px 6px 0px var(--color-primary-black);
+    }
+    .Section-description-about-img img {
+        transform: skew(0);
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+/* ---------------------- SERVICES ---------------------- */
+.section-services-bg {
+    background: url(../../../img/about-service-bg.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+.section-services-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.runningService {
+    display: block;
+    background-color: #fff;
+    padding: 40px;
+    text-align: left;
+    transition: 0.3s;
+    margin-bottom: 30px;
+
+    position: relative;
+    border-radius: 10px;
+    transform: skew(-10deg);
+}
+
+.section-services-title-h {
+    font-size: clamp(2.2rem, 1rem + 3vw, 3.625rem);
+    line-height: 1;
+    position: relative;
+    font-weight: 500;
+}
+.section-services-title-subTitle {
+    color: var(--color-secondary);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.section-services-title-p {
+    font-size: clamp(1em, 0.5rem + 1vw, 2rem);
+}
+
+.runningService-icon {
+    font-size: 60px;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    line-height: 1;
+    transition: 0.3s;
+    display: block;
+}
+.runningService-body {
+    transform: skew(5deg);
+}
+
+.runningService-body-h {
+    margin-bottom: 10px;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.runningService-body-h:hover {
+    color: var(--color-primary);
+}
+.runningService-body-p {
+    font-size: 0.875rem;
+}
+
+@media screen and (max-width: 776px) {
+    .runningService {
+        transform: skew(0deg);
+        text-align: center;
+    }
+
+    .runningService-body {
+        transform: skew(0deg);
+    }
+}
+
+/* ------------------------ TEAM ------------------------ */
+.section-team {
+    background: url(../../../img/team-bg.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.section-team::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.section-team-title-h {
+    font-size: clamp(2.2rem, 1rem + 3vw, 3.625rem);
+    color: var(--color-primary);
+    text-align: center;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+/* ------------------------ CARD ------------------------ */
+.trainer-team {
+    max-width: 360px;
+    background: white;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.trainer-team-img {
+    width: 100%;
+}
+.trainer-team-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+.trainer-team-body {
+    padding: 30px;
+}
+.trainer-team-body-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.trainer-team-body-title:hover {
+    color: var(--color-primary);
+}
+.trainer-team-body-categories {
+    font-size: 1rem;
+    color: #686a6f;
+    margin-top: 10px;
+}
+.trainer-team-body-info {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #686a6f;
+}
+.trainer-team-body-info i {
+    margin-right: 5px;
+    color: var(--color-primary);
+}
