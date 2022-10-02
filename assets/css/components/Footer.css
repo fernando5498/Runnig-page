@@ -10,7 +10,7 @@
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(12px, 0.5rem + 1vw, 14px);
+    font-size: clamp(10px, 0.4rem + 1vw, 14px);
     width: 100%;
     padding: 1rem;
 }
@@ -22,7 +22,7 @@
 .Footer-subTitle {
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: clamp(1.1rem, 0.5rem + 1vw, 1.25rem);
     margin-bottom: 2.2rem;
 }
 
@@ -34,7 +34,7 @@
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(0.875rem, 0.5rem + 1vw, 1.0625rem);
+    font-size: clamp(0.8rem, 0.5rem + 1vw, 1rem);
 }
 .Footer-list .Footer-list-icons {
     display: grid;
@@ -79,5 +79,13 @@
     }
     .Footer-list .Footer-list-icons {
         max-width: 205px;
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+    .Footer-list .Footer-list-icons i {
+        display: none;
+    }
+    .Footer-list-circle::after {
+        display: none;
     }
 }

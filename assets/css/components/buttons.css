@@ -33,37 +33,43 @@
 }
 .Button--style-3 {
     background: #971f5f;
-
     color: white;
 }
 
 /* btn-size */
 
 .Button--medium {
-    width: clamp(220px, 210px + 2vw, 235px);
-    height: 52px;
+    width: clamp(185px, 175px + 2vw, 215px);
+    height: 50px;
 }
 .Button--medium a,
 .Button--medium button,
 .Button--medium input {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 0.5rem + 1vw, 1.5rem);
     text-shadow: none;
     width: 100%;
 }
 
 /* grande   */
 .Button--tall {
-    width: clamp(240px, 220px + 5vw, 285px);
+    width: clamp(190px, 170px + 4.7vw, 265px);
     height: 63px;
 }
 .Button--tall a,
 .Button--tall button,
 .Button--tall input {
-    font-size: clamp(1.6rem, 1.2rem + 1vw, 1.875rem);
+    font-size: clamp(1.2rem, 0.5rem + 1vw, 1.8rem);
     width: 100%;
 }
 
 .Button--small {
     width: clamp(190px, 180px + 2vw, 205px);
     height: 42px;
+}
+.Button--small a,
+.Button--small button,
+.Button--small input {
+    font-size: clamp(1rem, 0.5rem + 1vw, 1.5rem);
+    text-shadow: none;
+    width: 100%;
 }

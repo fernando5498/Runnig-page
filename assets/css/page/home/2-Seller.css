@@ -30,7 +30,7 @@
 
 .CardSellers-img {
     width: 202px;
-    height: 195px;
+    height: 202px;
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid rgba(151, 31, 95, 0.61);
@@ -94,7 +94,6 @@
 .CardSellers-title {
     width: 279.5px;
     height: 45px;
-
     border-radius: 10px;
     background: linear-gradient(90deg, #300537 21.3%, #971f5f 70.95%),
         linear-gradient(90deg, #300537 10.88%, #971f5f 37.66%, #970050 69.26%);
@@ -114,7 +113,26 @@
 
 /* .owl-carousel */
 
-.owl-carousel .owl-stage-outer {
+.SellerCarousel .owl-stage-outer {
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+    .CardSellers {
+        width: 260px;
+        height: 356px;
+    }
+
+    .CardSellers-img {
+        width: 190px;
+        height: 190px;
+    }
+    .CardSellers-title {
+        width: 269px;
+        height: 45px;
+    }
+    .CardSellers-title-h {
+        font-size: 1.2rem;
+    }
 }

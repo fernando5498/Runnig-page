@@ -1,3 +1,8 @@
+.Shoping-gallery {
+    position: relative;
+    background: url(../../../img/adorno.png) center no-repeat;
+    background-size: cover;
+}
 .Shoping-gallery-container {
     display: flex;
     gap: 3.2rem;
@@ -10,6 +15,7 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .filter-button {
@@ -38,4 +44,10 @@
 
 .item-shop {
     display: inline-block;
+}
+
+@media screen and (max-width: 576px) {
+    .buttons-gallery {
+        gap: 1rem;
+    }
 }

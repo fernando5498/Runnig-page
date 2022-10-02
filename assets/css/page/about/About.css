@@ -23,6 +23,8 @@
 }
 .Section-description-about-p {
     font-size: clamp(0.8rem, 0.5rem + 0.5vw, 1.2rem);
+    font-family: "Ubuntu";
+    color: #667085;
 }
 
 @media screen and (max-width: 776px) {
@@ -38,152 +40,93 @@
     }
 }
 
-/* ---------------------- SERVICES ---------------------- */
-.section-services-bg {
-    background: url(../../../img/about-service-bg.jpg) center no-repeat;
-    background-size: cover;
-    position: relative;
-    z-index: 0;
+/* ----------------------- MISION ----------------------- */
+
+.Mision-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
 }
-.section-services-bg::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.Mision-item {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 20px;
+}
+.Mision-item-icon {
+    color: var(--color-primary);
+    font-size: 5rem;
+}
+.Mision-item-h {
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    font-size: clamp(1.3rem, 0.5rem + 1vw, 2rem);
+}
+.Mision-item-p {
+    color: #667085;
+    font-size: 0.8rem;
+    font-family: "Ubuntu";
+}
+
+.MisionCard-shadow {
+    width: 280.24px;
+    height: 360px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    transform: skew(-10deg);
+    background: #300537;
+}
+.MisionCard-img {
+    width: inherit;
+    height: 360px;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    left: 10px;
+    top: -10px;
+}
+.MisionCard-img img {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-}
-
-.runningService {
-    display: block;
-    background-color: #fff;
-    padding: 40px;
-    text-align: left;
-    transition: 0.3s;
-    margin-bottom: 30px;
-
-    position: relative;
-    border-radius: 10px;
-    transform: skew(-10deg);
-}
-
-.section-services-title-h {
-    font-size: clamp(2.2rem, 1rem + 3vw, 3.625rem);
-    line-height: 1;
-    position: relative;
-    font-weight: 500;
-}
-.section-services-title-subTitle {
-    color: var(--color-secondary);
-    font-size: 1rem;
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-.section-services-title-p {
-    font-size: clamp(1em, 0.5rem + 1vw, 2rem);
-}
-
-.runningService-icon {
-    font-size: 60px;
-    color: var(--color-primary);
-    margin-bottom: 10px;
-    line-height: 1;
-    transition: 0.3s;
-    display: block;
-}
-.runningService-body {
-    transform: skew(5deg);
-}
-
-.runningService-body-h {
-    margin-bottom: 10px;
-    transition: 0.3s;
-    font-size: 1.5rem;
-    line-height: 1.3;
-    font-weight: 700;
-}
-
-.runningService-body-h:hover {
-    color: var(--color-primary);
-}
-.runningService-body-p {
-    font-size: 0.875rem;
+    object-fit: cover;
+    transition: all 300ms;
+    transform: skew(10deg) scale(1.2);
 }
 
 @media screen and (max-width: 776px) {
-    .runningService {
-        transform: skew(0deg);
-        text-align: center;
-    }
-
-    .runningService-body {
+    .MisionCard-shadow {
+        width: 100%;
+        height: 360px;
         transform: skew(0deg);
     }
+    .MisionCard-img img {
+        transform: skew(0deg) scale(1.2);
+    }
+}
+/* --------------------- INFO ABOUT --------------------- */
+
+.infoAbout {
+    background-color: #f1f1f1;
 }
 
-/* ------------------------ TEAM ------------------------ */
-.section-team {
-    background: url(../../../img/team-bg.jpg) center no-repeat;
-    background-size: cover;
-    position: relative;
+.itemInfoAbout {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
 }
-.section-team::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+.itemInfoAbout-icon {
+    font-size: 2rem;
 }
-.section-team-title-h {
-    font-size: clamp(2.2rem, 1rem + 3vw, 3.625rem);
+.itemInfoAbout-content-h {
+    font-size: 1rem;
     color: var(--color-primary);
-    text-align: center;
-    line-height: 1;
-    position: relative;
-    z-index: 1;
+    font-weight: 600;
     margin: 0;
 }
-/* ------------------------ CARD ------------------------ */
-.trainer-team {
-    max-width: 360px;
-    background: white;
-    border-radius: 10px;
-    margin: 0 auto;
-}
-.trainer-team-img {
-    width: 100%;
-}
-.trainer-team-img img {
-    width: 100%;
-    border-radius: 10px;
-}
-.trainer-team-body {
-    padding: 30px;
-}
-.trainer-team-body-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    transition: var(--transition);
-}
-.trainer-team-body-title:hover {
-    color: var(--color-primary);
-}
-.trainer-team-body-categories {
-    font-size: 1rem;
-    color: #686a6f;
-    margin-top: 10px;
-}
-.trainer-team-body-info {
-    font-weight: 300;
-    font-size: 1rem;
-    margin-top: 5px;
-    color: #686a6f;
-}
-.trainer-team-body-info i {
-    margin-right: 5px;
-    color: var(--color-primary);
+.itemInfoAbout-content-p {
+    font-size: 0.9rem;
+    color: #667085;
+    font-family: "Ubuntu";
 }

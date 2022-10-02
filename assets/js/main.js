@@ -64,10 +64,6 @@ if (document.getElementById("CarouselTestimonials")) {
 
 	/* ------------------------ MODAL Testimonial ----------------------- */
 	const modalContainer = document.getElementById("ModalTestmonial"),
-		modalContainerImg = document.getElementById("ModalTestmonial-content"),
-		modalTitle = document.getElementById("ModalTestmonial-title"),
-		modalImg = document.getElementById("ModalTestmonial-img"),
-		modalInfo = document.getElementById("ModalTestmonial-info"),
 		modalVideo = document.getElementById("Testmonial-video"),
 		itemsTestimonialVideo = document.querySelectorAll(".item-testimonial-video"),
 		itemsTestimonial = document.querySelectorAll(".item-testimonial")
@@ -90,34 +86,16 @@ if (document.getElementById("CarouselTestimonials")) {
 	itemsTestimonial.forEach((item) => {
 		item.addEventListener("click", () => {
 			// recoleccion de datos
-			let nameTestimonial = item.lastElementChild.firstElementChild.textContent
-			let infoTestimonial = item.firstElementChild.firstElementChild.dataset.info
 			let urlTestimonial = item.firstElementChild.firstElementChild.firstElementChild.src
 
 			// tipo de elemento
 			let typeElement = item.firstElementChild.firstElementChild.firstElementChild.nodeName
 
 			switch (typeElement) {
-				case "IMG":
-					modalInfo.classList.remove("d-none")
-					modalImg.classList.add("col-sm-6")
-					// creacion de elemento img
-					let ElementImg = `<img src='${urlTestimonial}' alt='' loading='lazy'/>`
-					modalImg.innerHTML = ElementImg
-					// inserccion de datos en el modal
-					modalTitle.innerHTML = nameTestimonial
-					modalInfo.innerHTML = infoTestimonial
-					modalVideo.classList.add("d-none")
-					modalContainerImg.classList.remove("d-none")
-					modalContainer.classList.add("active")
-					break
-
 				case "VIDEO":
 					// insercion del video
 					modalVideo.firstElementChild.src = urlTestimonial
 					const context = document.querySelector(".canvas").getContext("2d")
-					modalVideo.classList.remove("d-none")
-					modalContainerImg.classList.add("d-none")
 					context.drawImage(
 						item.firstElementChild.firstElementChild.firstElementChild,
 						0,
@@ -126,11 +104,10 @@ if (document.getElementById("CarouselTestimonials")) {
 						600
 					)
 					modalContainer.classList.add("active")
-
 					break
 
 				default:
-					console.log("Error")
+					console.log("no es un video")
 					break
 			}
 		})
@@ -191,6 +168,13 @@ if (document.querySelector(".Questions-item")) {
 	itemQuestions.forEach((item) => {
 		item.addEventListener("click", () => {
 			item.parentElement.classList.toggle("active")
+			itemQuestions.forEach((item2) => {
+				if (item2 !== item) {
+					item2.parentElement.classList.remove("active")
+				} else {
+					console.log("hola")
+				}
+			})
 		})
 	})
 
@@ -200,7 +184,6 @@ if (document.querySelector(".Questions-item")) {
 		let x = (e.clientX * movingValue.dataset.value) / 250
 		let y = (e.clientY * movingValue.dataset.value) / 150
 		movingValue.style.transform = "translateX(" + x + "px) translateY(" + y + "px) "
-		console.log(movingValue.style.transform)
 	})
 }
 /* ------------------------ SHOP ------------------------ */

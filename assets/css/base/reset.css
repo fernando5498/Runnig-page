@@ -35,6 +35,14 @@ ul {
 html {
     scroll-behavior: smooth;
 }
+body::-webkit-scrollbar {
+    width: 4px;
+}
+body::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+}
 
 body {
     min-height: 100vh;

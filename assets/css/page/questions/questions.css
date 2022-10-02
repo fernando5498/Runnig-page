@@ -6,6 +6,11 @@
     position: relative;
     color: white;
 }
+.Hero-Questions-text {
+    font-size: clamp(1rem, 0.5rem + 1vw, 1.1rem);
+    font-family: "Ubuntu";
+}
+
 .Hero-Questions .SubTitle-text {
     left: 0;
     text-shadow: -5px 4px 0px #300537;
@@ -52,11 +57,12 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    z-index: -1;
 }
 
 .Questions-title {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.9969rem;
     text-align: center;
     color: var(--color-primary);
@@ -66,6 +72,7 @@
     font-weight: 400;
     font-size: 1.1094rem;
     text-align: center;
+    font-family: "Ubuntu";
 }
 /* ------------------------ IMTES ----------------------- */
 
@@ -81,7 +88,13 @@
     max-width: 800px;
     margin: 0 auto;
     border-radius: 15px;
+    background-color: var(--color-white);
+    transition: var(--transition);
 }
+.Questions-item.active {
+    background-color: #f9f3fa;
+}
+
 .Questions-item.active .Questions-item-body {
     height: 60px;
 }
@@ -89,12 +102,15 @@
     cursor: pointer;
 }
 
-.Questions-item-header-icons {
-    color: var(--color-primary);
-    gap: 0.5rem;
+.Questions-item-header-icon {
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    transition: 200ms;
 }
-.Questions-item.active .Questions-item-header-icons {
-    flex-direction: row-reverse;
+.Questions-item.active .Questions-item-header-icon {
+    background: var(--color-primary);
 }
 
 .Questions-item-body {
@@ -105,15 +121,17 @@
 
 .Questions-item-title {
     font-style: normal;
-    font-weight: 500;
-    font-size: 1.1rem;
+    font-weight: 600;
+    font-size: 1rem;
     color: var(--color-primary);
+    width: 90%;
 }
 .Questions-item-text {
     font-style: normal;
     font-weight: 400;
     font-size: clamp(0.7rem, 0.3rem + 0.5vw, 0.8875rem);
     color: #667085;
+    font-family: "Ubuntu";
 }
 
 @media screen and (max-width: 772px) {
@@ -163,10 +181,12 @@
 .CustomerSupport-h {
     text-align: center;
     color: var(--color-primary);
+    font-weight: 700;
 }
 .CustomerSupport-p {
     text-align: center;
     color: #667085;
+    font-family: "Ubuntu";
 }
 
 @media screen and (max-width: 572px) {

@@ -100,7 +100,21 @@
 }
 
 @media screen and (max-width: 572px) {
+    .CardShop-shadow {
+        height: 330px;
+    }
     .CardShop-title {
         margin: 0 auto;
+    }
+    .CardShop-img {
+        width: 240px;
+        height: 330px;
+    }
+    .CardShop-title {
+        width: 240px;
+        height: 45px;
+    }
+    .CardShop-title-h {
+        font-size: 1.2rem;
     }
 }

@@ -16,11 +16,11 @@
 .About-p {
     font-style: italic;
     font-weight: 800;
-    font-size: clamp(0.875rem, 0.5rem + 1vw, 1rem);
+    font-size: clamp(0.75rem, 0.5rem + 1vw, 1rem);
     color: var(--color-white);
 }
 .About-p::first-letter {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 0.5rem + 1vw, 1.5rem);
 }
 /* imagen  */
 
@@ -103,7 +103,7 @@
     }
     .container-about-img {
         width: 90%;
-        max-height: 450px;
+        max-height: 400px;
         margin-top: 0px;
         transform: skew(0deg);
         position: relative;
@@ -113,17 +113,24 @@
         transform: skew(0deg);
         object-fit: cover;
     }
-    .Beneficios {
-        justify-content: start;
-    }
+
     .Beneficios::after {
         transform: skew(0deg);
         left: 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .Beneficios-item {
+        flex-direction: column;
     }
 }
 
 @media screen and (max-width: 572px) {
     .Beneficios {
         justify-content: center;
+    }
+
+    .Beneficios-item-text {
+        font-size: 1rem;
     }
 }
