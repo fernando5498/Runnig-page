@@ -52,7 +52,8 @@ if (document.getElementById("CarouselTestimonials")) {
 		center: true,
 		items: 1,
 		loop: true,
-		margin: 30,
+		margin: 120,
+
 		nav: true,
 		dots: false,
 		video: true,
@@ -162,7 +163,6 @@ if (document.getElementById("CarouselTrainnes")) {
 /* ---------------------- QUESTIONS --------------------- */
 
 if (document.querySelector(".Questions-item")) {
-	console.log("verdadero")
 	let itemQuestions = document.querySelectorAll(".Questions-item-header")
 
 	itemQuestions.forEach((item) => {

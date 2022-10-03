@@ -50,4 +50,7 @@
     .buttons-gallery {
         gap: 1rem;
     }
+    .filter-button {
+        width: 90%;
+    }
 }

@@ -1,18 +1,19 @@
 .Hero-Questions {
     position: relative;
-    height: clamp(520px, 100vh, 620px);
+    height: clamp(520px, 100vh, 900px);
     display: flex;
     align-items: center;
     position: relative;
     color: white;
 }
 .Hero-Questions-text {
-    font-size: clamp(1rem, 0.5rem + 1vw, 1.1rem);
+    font-size: 1rem;
     font-family: "Ubuntu";
 }
 
 .Hero-Questions .SubTitle-text {
     left: 0;
+    font-size: var(--font-title);
     text-shadow: -5px 4px 0px #300537;
 }
 .Hero-Questions::after {
@@ -49,7 +50,8 @@
     position: relative;
 }
 .Questions-bg {
-    background: url(../../../img/bg-quetions.png) top no-repeat;
+    background: url(../../../img/bg-quetions.png) no-repeat;
+    background-position: 50% 30%;
     background-size: 90%;
     position: absolute;
     top: 0;
@@ -60,20 +62,6 @@
     z-index: -1;
 }
 
-.Questions-title {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.9969rem;
-    text-align: center;
-    color: var(--color-primary);
-}
-.Questions-title-text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.1094rem;
-    text-align: center;
-    font-family: "Ubuntu";
-}
 /* ------------------------ IMTES ----------------------- */
 
 .Questions-list {
@@ -96,7 +84,7 @@
 }
 
 .Questions-item.active .Questions-item-body {
-    height: 60px;
+    height: 100px;
 }
 .Questions-item-header {
     cursor: pointer;
@@ -120,16 +108,14 @@
 }
 
 .Questions-item-title {
-    font-style: normal;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--color-primary);
     width: 90%;
 }
 .Questions-item-text {
-    font-style: normal;
     font-weight: 400;
-    font-size: clamp(0.7rem, 0.3rem + 0.5vw, 0.8875rem);
+    font-size: 1rem;
     color: #667085;
     font-family: "Ubuntu";
 }
@@ -179,11 +165,14 @@
     height: 100%;
 }
 .CustomerSupport-h {
+    font-size: clamp(1.5rem, 1rem + 3vw, 1.8rem);
+
     text-align: center;
     color: var(--color-primary);
     font-weight: 700;
 }
 .CustomerSupport-p {
+    font-size: 1rem;
     text-align: center;
     color: #667085;
     font-family: "Ubuntu";
@@ -191,6 +180,6 @@
 
 @media screen and (max-width: 572px) {
     .Questions-item.active .Questions-item-body {
-        height: 100px;
+        height: 145px;
     }
 }

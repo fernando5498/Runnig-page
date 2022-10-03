@@ -15,8 +15,7 @@
 }
 .About-p {
     font-style: italic;
-    font-weight: 800;
-    font-size: clamp(0.75rem, 0.5rem + 1vw, 1rem);
+    font-size: 1rem;
     color: var(--color-white);
 }
 .About-p::first-letter {
@@ -128,6 +127,7 @@
 @media screen and (max-width: 572px) {
     .Beneficios {
         justify-content: center;
+        flex-direction: column;
     }
 
     .Beneficios-item-text {

@@ -1,6 +1,6 @@
 .Hero {
     background: url(../../../img/HERO.jpg) center no-repeat;
-    height: clamp(620px, 100vh, 720px);
+    height: clamp(620px, 100vh, 900px);
     background-size: cover;
     position: relative;
 }

@@ -53,6 +53,18 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
+p {
+    text-align: justify;
+    font-family: "Ubuntu";
+    font-size: var(--font-text);
+    font-style: italic;
+}
+
+@media screen and (max-width: 767px) {
+    p {
+        text-align: center;
+    }
+}
 main {
     overflow-x: hidden;
 }

@@ -24,14 +24,16 @@
 
     background: linear-gradient(180deg, #300537 16.04%, #971f5f 116.04%);
 }
-.Testimonials-conatainer-carrusel {
-    margin-top: -60px;
+
+.Testimonials-right-bg--about {
+    top: 0;
+    height: 100%;
 }
 
-@media screen and (max-width: 772px) {
+@media screen and (max-width: 767px) {
     .Testimonials-right-bg {
         width: 100%;
-        height: 57.5%;
+        height: 52%;
         left: 0;
         border-radius: 0px;
         transform: skew(0);
@@ -56,13 +58,12 @@
 /* cards  */
 
 .CardTestimonial {
-    width: 400px;
-    min-height: 379px;
-    padding: 2rem;
+    width: 330px;
+    padding: 1.5rem;
     background: #fffdfd;
     border: 1px solid #e4e4e4;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -71,15 +72,28 @@
     margin: 0 auto;
     transition: var(--transition);
 }
+.item-testimonial--video {
+    gap: 1rem;
+}
+.item-testimonial--video .CardTestimonial-content {
+    grid-template-columns: 100%;
+}
+.item-testimonial--video .CardTestimonial-poster {
+    width: 120px;
+    height: 120px;
+}
 
 .CardTestimonial-content {
+    display: grid;
+    gap: 1rem;
     position: relative;
-    transform: skew(10deg);
+    align-items: center;
+    grid-template-columns: 80px 1fr;
 }
 
 .CardTestimonial-poster {
-    width: 202px;
-    height: 202px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid rgba(151, 31, 95, 0.61);
@@ -124,7 +138,6 @@
 }
 .CardTestimonial-content-p {
     text-align: center;
-    max-height: 100px;
     overflow: hidden;
     font-family: "Ubuntu";
     color: #596172;
@@ -132,36 +145,24 @@
 }
 
 .CardTestimonial-title {
-    width: 279.5px;
-    height: 45px;
+    padding: 0.7rem;
     border-radius: 10px;
     background: linear-gradient(90deg, #300537 21.3%, #971f5f 70.95%),
         linear-gradient(90deg, #300537 10.88%, #971f5f 37.66%, #970050 69.26%);
     color: var(--color-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: skew(10deg);
+    transform: skew(-15deg);
 }
 .CardTestimonial-title-h {
     font-style: italic;
     font-weight: 700;
-    font-size: 25px;
-    line-height: 38px;
+    font-size: 1.3rem;
+    transform: skew(15deg);
     margin: 0;
 }
 
 @media screen and (max-width: 576px) {
     .CardTestimonial {
-        width: 260px;
-    }
-    .CardTestimonial-poster {
-        width: 190px;
-        height: 190px;
-    }
-    .CardTestimonial-title {
-        width: 269px;
-        height: 45px;
+        width: 85%;
     }
     .CardTestimonial-title-h {
         font-size: 1.2rem;
@@ -169,12 +170,19 @@
 }
 
 /* -------------------- .OWL-CAROUSEL ------------------- */
-.owl-nav {
+.CarouselTes .owl-nav {
     color: white;
     font-size: 2rem;
 }
 
-.owl-nav button:hover {
+.CarouselTes .owl-nav button:hover {
     background: transparent !important;
     transform: scale(1.1);
+}
+
+.CarouselTes .owl-stage-outer {
+    width: 120%;
+}
+.CarouselTes .owl-stage-outer .item {
+    padding: 0px 1rem;
 }

@@ -14,15 +14,9 @@
     object-fit: contain;
     transform: skew(25deg) scale(1.5);
 }
-.Section-description-about-h {
-    font-size: clamp(2.2rem, 1rem + 3vw, 3.625rem);
-    line-height: 1;
-    position: relative;
-    font-weight: 600;
-    color: var(--color-primary);
-}
+
 .Section-description-about-p {
-    font-size: clamp(0.8rem, 0.5rem + 0.5vw, 1.2rem);
+    font-size: 1rem;
     font-family: "Ubuntu";
     color: #667085;
 }
@@ -41,33 +35,43 @@
 }
 
 /* ----------------------- MISION ----------------------- */
+.section-mision {
+    background: #971f5f17;
+}
 
 .Mision-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1rem;
 }
+.wrapper-mision-item {
+    transform: skew(-15deg);
+    background: var(--color-white);
+    border: 1px solid #e4e4e4;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 50px;
+}
 .Mision-item {
-    padding: 1rem;
-    background-color: white;
-    border-radius: 20px;
+    padding: 1.5rem 2.5rem;
+    transform: skewX(15deg);
 }
 .Mision-item-icon {
     color: var(--color-primary);
-    font-size: 5rem;
+    font-size: 4rem;
 }
 .Mision-item-h {
     color: var(--color-primary);
     font-weight: 600;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-
     font-size: clamp(1.3rem, 0.5rem + 1vw, 2rem);
 }
 .Mision-item-p {
-    color: #667085;
-    font-size: 0.8rem;
+    color: var(--color-primary);
     font-family: "Ubuntu";
+    font-style: italic;
+    font-size: var(--font-text);
+    margin-left: -2rem;
 }
 
 .MisionCard-shadow {
@@ -96,6 +100,10 @@
 }
 
 @media screen and (max-width: 776px) {
+    .wrapper-mision-item {
+        width: 90%;
+        margin: 0 auto;
+    }
     .MisionCard-shadow {
         width: 100%;
         height: 360px;
