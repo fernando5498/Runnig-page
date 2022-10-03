@@ -25,11 +25,6 @@
     background: linear-gradient(180deg, #300537 16.04%, #971f5f 116.04%);
 }
 
-.Testimonials-right-bg--about {
-    top: 0;
-    height: 100%;
-}
-
 @media screen and (max-width: 767px) {
     .Testimonials-right-bg {
         width: 100%;
@@ -59,45 +54,38 @@
 
 .CardTestimonial {
     width: 330px;
+    min-height: 366px;
     padding: 1.5rem;
     background: #fffdfd;
     border: 1px solid #e4e4e4;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--box-shadow-1);
     border-radius: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    transform: skew(-10deg);
+    transform: var(--skew-negative-small);
     margin: 0 auto;
     transition: var(--transition);
-}
-.item-testimonial--video {
-    gap: 1rem;
-}
-.item-testimonial--video .CardTestimonial-content {
-    grid-template-columns: 100%;
-}
-.item-testimonial--video .CardTestimonial-poster {
-    width: 120px;
-    height: 120px;
 }
 
 .CardTestimonial-content {
     display: grid;
-    gap: 1rem;
+    gap: 0.5rem;
     position: relative;
     align-items: center;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 100%;
+    transform: var(--skew-positive-small);
 }
 
 .CardTestimonial-poster {
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid rgba(151, 31, 95, 0.61);
     position: relative;
+    margin: 0 auto;
 }
 .CardTestimonial-poster i {
     position: absolute;
@@ -136,37 +124,43 @@
     object-fit: cover;
     position: relative;
 }
+
 .CardTestimonial-content-p {
     text-align: center;
-    overflow: hidden;
     font-family: "Ubuntu";
     color: #596172;
     font-size: 0.9rem;
+    transform: var(--skew-positive-small);
 }
 
 .CardTestimonial-title {
-    padding: 0.7rem;
-    border-radius: 10px;
     background: linear-gradient(90deg, #300537 21.3%, #971f5f 70.95%),
         linear-gradient(90deg, #300537 10.88%, #971f5f 37.66%, #970050 69.26%);
     color: var(--color-white);
-    transform: skew(-15deg);
+    border-radius: 10px;
+    transform: var(--skew-negative-small);
+    padding: 0.5rem 1rem;
 }
+
 .CardTestimonial-title-h {
     font-style: italic;
     font-weight: 700;
-    font-size: 1.3rem;
-    transform: skew(15deg);
+    transform: var(--skew-positive-small);
+    font-size: 1.4rem;
     margin: 0;
 }
 
-@media screen and (max-width: 576px) {
-    .CardTestimonial {
-        width: 85%;
-    }
-    .CardTestimonial-title-h {
-        font-size: 1.2rem;
-    }
+/* video */
+
+.item-testimonial--video {
+    gap: 1rem;
+}
+.item-testimonial--video .CardTestimonial-content {
+    grid-template-columns: 100%;
+}
+.item-testimonial--video .CardTestimonial-poster {
+    width: 180px;
+    height: 180px;
 }
 
 /* -------------------- .OWL-CAROUSEL ------------------- */
@@ -183,6 +177,20 @@
 .CarouselTes .owl-stage-outer {
     width: 120%;
 }
-.CarouselTes .owl-stage-outer .item {
-    padding: 0px 1rem;
+
+.CarouselTes .item {
+    padding-left: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+    .CardTestimonial {
+        width: 85%;
+    }
+    .CardTestimonial-title-h {
+        font-size: 1.2rem;
+    }
+
+    .CarouselTes .item {
+        padding-left: 0rem;
+    }
 }

@@ -2,28 +2,41 @@
     background: url(../../../img/adorno.png) center no-repeat;
     background-size: cover;
 }
+
+.Contact-info {
+    box-shadow: var(--box-shadow-1);
+    padding: 1.5rem 2rem;
+    border-radius: 30px;
+    transform: var(--skew-negative-normal);
+    color: var(--color-primary);
+}
+
+.wrapper-Contact-info {
+    transform: var(--skew-positive-normal);
+}
+
 .Contact-map {
-    height: 100%;
-    border-radius: 10px;
+    border-radius: 30px;
     overflow: hidden;
     width: 100%;
-    min-height: 300px;
+    height: 380px;
 }
 
 /* ------------------------ FORM ------------------------ */
 .Contact-form {
-    padding: 0rem 1.5rem 0rem 1.5rem;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: var(--box-shadow-1);
 }
 
 .form-title {
-    font-style: normal;
+    font-style: italic;
     font-weight: 600;
     font-size: clamp(1.8rem, 1rem + 3vw, 2.5rem);
     color: var(--color-primary);
 }
 .form-input {
     font-family: "Ubuntu";
-    font-style: normal;
     display: block;
     width: 100%;
     font-weight: 400;
@@ -44,7 +57,6 @@
 }
 .form-label {
     font-family: "Ubuntu";
-    font-style: normal;
     font-weight: 500;
     font-size: 0.875rem;
     color: var(--color-primary);

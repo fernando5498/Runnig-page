@@ -1,0 +1,21 @@
+.SubtitleCard {
+    padding: 0.5rem 1rem;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #300537 21.3%, #971f5f 70.95%),
+        linear-gradient(90deg, #300537 10.88%, #971f5f 37.66%, #970050 69.26%);
+    color: var(--color-white);
+    transform: var(--skew-negative-small);
+    margin-right: -5rem;
+}
+.SubtitleCard-h {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transform: var(--skew-positive-small);
+    margin: 0;
+    text-align: center;
+}

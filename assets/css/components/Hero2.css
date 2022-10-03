@@ -1,0 +1,44 @@
+.Hero-Questions {
+    position: relative;
+    height: clamp(520px, 100vh, 900px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+.Hero-Questions-text {
+    font-size: 1rem;
+    font-family: "Ubuntu";
+}
+
+.Hero-Questions .SubTitle-text {
+    left: 0;
+    font-size: var(--font-title);
+    text-shadow: -5px 4px 0px #300537;
+}
+.Hero-Questions::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 110%;
+    height: 100%;
+    background: url(../../../img/adorno.png) #300537;
+    background-position: 0% 45%;
+    background-size: 94%;
+    z-index: -1;
+}
+
+.Hero-Questions-img {
+    width: 400px;
+    transform: var(--skew-negative-hight);
+    height: 388px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.Hero-Questions-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: var(--skew-positive-hight) scale(1.5);
+}

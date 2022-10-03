@@ -66,8 +66,8 @@ if (document.getElementById("CarouselTestimonials")) {
 	/* ------------------------ MODAL Testimonial ----------------------- */
 	const modalContainer = document.getElementById("ModalTestmonial"),
 		modalVideo = document.getElementById("Testmonial-video"),
-		itemsTestimonialVideo = document.querySelectorAll(".item-testimonial-video"),
-		itemsTestimonial = document.querySelectorAll(".item-testimonial")
+		itemsTestimonialVideo = document.querySelectorAll(".item-testimonial-video")
+	// itemsTestimonial = document.querySelectorAll(".item-testimonial")
 
 	// autoplay hover para videos
 
@@ -75,6 +75,9 @@ if (document.getElementById("CarouselTestimonials")) {
 		itemVid.addEventListener("mouseenter", () => {
 			setTimeout(() => {
 				itemVid.play()
+				setTimeout(() => {
+					itemVid.pause()
+				}, 5000)
 			}, 1000)
 		})
 		itemVid.addEventListener("mouseout", () => {
@@ -84,77 +87,32 @@ if (document.getElementById("CarouselTestimonials")) {
 
 	// abir en modal
 
-	itemsTestimonial.forEach((item) => {
+	itemsTestimonialVideo.forEach((item) => {
 		item.addEventListener("click", () => {
 			// recoleccion de datos
-			let urlTestimonial = item.firstElementChild.firstElementChild.firstElementChild.src
-
+			let urlTestimonial = item.src
 			// tipo de elemento
-			let typeElement = item.firstElementChild.firstElementChild.firstElementChild.nodeName
 
-			switch (typeElement) {
-				case "VIDEO":
-					// insercion del video
-					modalVideo.firstElementChild.src = urlTestimonial
-					const context = document.querySelector(".canvas").getContext("2d")
-					context.drawImage(
-						item.firstElementChild.firstElementChild.firstElementChild,
-						0,
-						0,
-						900,
-						600
-					)
-					modalContainer.classList.add("active")
-					break
-
-				default:
-					console.log("no es un video")
-					break
-			}
+			// insercion del video
+			modalVideo.firstElementChild.src = urlTestimonial
+			const context = document.querySelector(".canvas").getContext("2d")
+			context.drawImage(item, 0, 0, 900, 600)
+			modalContainer.classList.add("active")
 		})
 	})
-
 	// x del menu reusado para cerrar el modal tambien
 	MenuClose.forEach((iconClose) => [
 		iconClose.addEventListener("click", () => {
 			modalContainer.classList.remove("active")
+			modalVideo.firstElementChild.pause()
 		}),
 	])
+
 	// cerrar modal por fuera
 	modalContainer.addEventListener("click", (e) => {
 		if (e.target.id == "ModalTestmonial" || e.target.classList == "container") {
 			modalContainer.classList.remove("active")
 		}
-	})
-}
-
-// trainers
-if (document.getElementById("CarouselTrainnes")) {
-	$("#CarouselTrainnes").owlCarousel({
-		items: 1,
-		loop: true,
-		margin: 40,
-		autoplay: true,
-		dots: false,
-		autoplayHoverPause: true,
-		navText: [
-			'<i class="fa-solid fa-caret-left"></i>',
-			'<i class="fa-solid fa-caret-right"></i>',
-		],
-		responsive: {
-			768: {
-				items: 2,
-			},
-			992: {
-				items: 3,
-			},
-			1200: {
-				items: 4,
-			},
-			1600: {
-				items: 5,
-			},
-		},
 	})
 }
 

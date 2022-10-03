@@ -1,50 +1,3 @@
-.Hero-Questions {
-    position: relative;
-    height: clamp(520px, 100vh, 900px);
-    display: flex;
-    align-items: center;
-    position: relative;
-    color: white;
-}
-.Hero-Questions-text {
-    font-size: 1rem;
-    font-family: "Ubuntu";
-}
-
-.Hero-Questions .SubTitle-text {
-    left: 0;
-    font-size: var(--font-title);
-    text-shadow: -5px 4px 0px #300537;
-}
-.Hero-Questions::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 110%;
-    height: 100%;
-    background: url(../../../img/adorno.png) #300537 36.04%;
-    background-position: 62% 45%;
-    background-size: 85%;
-    transform: skew(-25deg) translateX(-50%);
-    z-index: -1;
-    border-radius: 30px;
-}
-
-.Hero-Questions-img {
-    width: 400px;
-    transform: skew(-25deg);
-    height: 388px;
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-.Hero-Questions-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transform: skew(25deg) scale(1.5);
-}
 /* --------------------- #QUESTIONS --------------------- */
 .Questions {
     position: relative;
@@ -72,7 +25,7 @@
 
 .Questions-item {
     padding: 1.7rem 1rem 1rem 1rem;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    box-shadow: var(--box-shadow-1);
     max-width: 800px;
     margin: 0 auto;
     border-radius: 15px;
@@ -109,6 +62,7 @@
 
 .Questions-item-title {
     font-weight: 600;
+    font-style: italic;
     font-size: 1.2rem;
     color: var(--color-primary);
     width: 90%;
@@ -118,15 +72,6 @@
     font-size: 1rem;
     color: #667085;
     font-family: "Ubuntu";
-}
-
-@media screen and (max-width: 772px) {
-    .Hero-Questions::after {
-        left: 0%;
-        width: 100%;
-        transform: skew(0deg) translateX(0%);
-        border-radius: 0px;
-    }
 }
 
 /* ----------------------- SUPPOR ----------------------- */
@@ -166,10 +111,10 @@
 }
 .CustomerSupport-h {
     font-size: clamp(1.5rem, 1rem + 3vw, 1.8rem);
-
     text-align: center;
+    font-style: italic;
     color: var(--color-primary);
-    font-weight: 700;
+    font-weight: 600;
 }
 .CustomerSupport-p {
     font-size: 1rem;
